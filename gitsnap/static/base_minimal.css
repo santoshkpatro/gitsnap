@@ -1,0 +1,13 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #EEEFE9;
+}
+
+.gs-input:focus {
+    border-color: black;
+    box-shadow: none;
+}
+
+.gs-alert {
+    padding: 0.5rem 1rem;
+}

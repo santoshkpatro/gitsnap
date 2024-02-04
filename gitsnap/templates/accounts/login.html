@@ -1,0 +1,29 @@
+{% extends 'base_minimal.html' %}
+
+{% block main %}
+<div class="d-flex align-items-center justify-content-center" style="height: 90vh;">
+    <div class="card rounded shadow" style="width: 25rem;">
+        <div class="card-body">
+            <div class="py-3 px-2">
+                <h5>Log in</h5>
+                {% include 'alerts.html' %}
+                <hr />
+                <form action="{% url 'accounts-login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control gs-input" id="username" name="username" aria-label="username" placeholder="jeet">
+                        <label for="username">Username or Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control gs-input" id="password" aria-label="password" placeholder="Password" name="password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-dark" aria-label="login" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

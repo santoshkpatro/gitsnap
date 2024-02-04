@@ -1,0 +1,24 @@
+{% extends 'base_minimal.html' %}
+
+{% block main %}
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-4">
+            <h5>{{ user.first_name }} {{ user.last_name }}</h5>
+            <p class="fw-light">@{{ user.username }}</p>
+            <p class="fw-lighter">Member since {{ user.date_joined }}</p>
+        </div>
+
+        <div class="col-8">
+            <!-- Pinned Projects -->
+            <div>
+            </div>
+
+            <!-- Contributions Graph -->
+            <div>
+                <p>Contributions</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}
